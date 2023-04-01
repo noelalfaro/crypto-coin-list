@@ -45,7 +45,7 @@ export default function CoinDetail() {
         <div>
             {fullDetails && (
                 <>
-                    <h1>{fullDetails.textData[params.symbol].FullName}</h1>
+                    <h1>{fullDetails.textData[params.symbol].FullName || 'Loading'}</h1>
                     <img
                         className="images"
                         src={`https://www.cryptocompare.com${fullDetails.numbers[params.symbol].USD.IMAGEURL
@@ -62,55 +62,55 @@ export default function CoinDetail() {
                         <tbody>
                             <tr>
                                 <th>Launch Date </th>
-                                <td> {fullDetails.textData[params.symbol].AssetLaunchDate}</td>
+                                <td> {fullDetails.textData[params.symbol].AssetLaunchDate || 'none'}</td>
                             </tr>
                             <tr>
                                 <th>Website </th>
-                                <td> {fullDetails.textData[params.symbol].AssetWebsiteUrl} </td>
+                                <td> {fullDetails.textData[params.symbol].AssetWebsiteUrl || 'none'} </td>
                             </tr>
                             <tr>
                                 <th>Whitepaper </th>
-                                <td> {fullDetails.textData[params.symbol].AssetWhitepaperUrl}</td>
+                                <td> {fullDetails.textData[params.symbol].AssetWhitepaperUrl || 'none'}</td>
                             </tr>
                             <tr>
                                 <th>Monetary Symbol </th>
-                                <td> {fullDetails.numbers[params.symbol].USD.FROMSYMBOL}</td>
+                                <td> {fullDetails.numbers[params.symbol].USD.FROMSYMBOL || 'none'}</td>
                             </tr>
                             <tr>
                                 <th>Market </th>
-                                <td> {fullDetails.numbers[params.symbol].USD.MARKET} </td>
+                                <td> {fullDetails.numbers[params.symbol].USD.MARKET || 'none'} </td>
                             </tr>
                             <tr>
                                 <th>Last Transaction </th>
-                                <td> {fullDetails.numbers[params.symbol].USD.LASTUPDATE}</td>
+                                <td> {fullDetails.numbers[params.symbol].USD.LASTUPDATE || 'none'}</td>
                             </tr>
                             <tr>
                                 <th>Last Transaction Value</th>
-                                <td> {fullDetails.numbers[params.symbol].USD.LASTVOLUMETO} {fullDetails.numbers[params.symbol].USD.LASTVOLUME}</td>
+                                <td> {fullDetails.numbers[params.symbol].USD.LASTVOLUMETO || 'none'} {fullDetails.numbers[params.symbol].USD.LASTVOLUME || 'none'}</td>
                             </tr>
                             <tr>
                                 <th>Volume </th>
-                                <td> {fullDetails.numbers[params.symbol].USD.VOLUMEDAYTO}</td>
+                                <td> {fullDetails.numbers[params.symbol].USD.VOLUMEDAYTO || 'none'}</td>
                             </tr>
                             <tr>
                                 <th>Today's Open Price </th>
-                                <td> {fullDetails.numbers[params.symbol].USD.OPENDAY}</td>
+                                <td> {fullDetails.numbers[params.symbol].USD.OPENDAY || 'none'}</td>
                             </tr>
                             <tr>
                                 <th>Highest Price during the Day </th>
-                                <td> {fullDetails.numbers[params.symbol].USD.HIGHDAY}</td>
+                                <td> {fullDetails.numbers[params.symbol].USD.HIGHDAY || 'none'}</td>
                             </tr>
                             <tr>
                                 <th>Lowest Price during the Day </th>
-                                <td> {fullDetails.numbers[params.symbol].USD.LOWDAY}</td>
+                                <td> {fullDetails.numbers[params.symbol].USD.LOWDAY || 'none'}</td>
                             </tr>
                             <tr>
                                 <th>Change from Previous Day </th>
-                                <td> {fullDetails.numbers[params.symbol].USD.CHANGEDAY}</td>
+                                <td> {fullDetails.numbers[params.symbol].USD.CHANGEDAY || 'none'}</td>
                             </tr>
                             <tr>
                                 <th>Market Cap </th>
-                                <td>{fullDetails.numbers[params.symbol].USD.MKTCAP} </td>
+                                <td>{fullDetails.numbers[params.symbol].USD.MKTCAP || 'none'} </td>
                             </tr>
                         </tbody>
                     </table>
